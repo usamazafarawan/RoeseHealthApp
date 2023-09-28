@@ -1,0 +1,737 @@
+<mat-dialog-content class="mat-typography" style="overflow: auto;">
+  <i mat-dialog-title>
+    <mat-icon class="mat-icon close-icon" mat-dialog-close>close</mat-icon>
+  </i>
+  <form [formGroup]="cliaWavied">
+    <div class="main-container" #pdfContent>
+      <div class="header-text">
+        <div>
+          <span>URINE INITIAL DRUG SCREEN RESULT FORM</span>
+        </div>
+      </div>
+      <div class="header-img">
+        <div class="headers">
+          <div class="img">
+            <img src="../../assets/Clia.png" />
+          </div>
+          <div class="id-number">
+            <span><i>Specimen ID Number:</i></span>
+            <input type="text" formControlName="specimen_id" />
+          </div>
+        </div>
+      </div>
+      <div class="span-container">
+        <div class="s">
+          <span style="font-weight: 600; margin-left: 20px;">STEP 1: COMPLETED BY COLLECTOR OR EMPLOYER
+            REPRESENTATIVE</span>
+        </div>
+
+      </div>
+
+      <div class="inputs-container">
+        <div class="inputs">
+          <div class="inputs-row-one">
+            <span> COLLECTION SITE / COMPANY NAME</span>
+            <input type="text" formControlName="company_Name" />
+          </div>
+          <div class="inputs-row-one">
+            <span> NAME</span>
+            <input type="text" style="width: 91%" formControlName="Name" />
+          </div>
+          <div class="inputs-row-three">
+            <div class="address">
+              <span>ADDRESS</span>
+              <input type="text" formControlName="Address" />
+            </div>
+            <div class="suite">
+              <span>SUITE</span>
+              <input type="text" formControlName="Suite" />
+            </div>
+          </div>
+          <div class="inputs-row-three">
+            <div class="address" style="width: 50%">
+              <span>CITY</span>
+              <input type="text" formControlName="City" />
+            </div>
+            <div class="suite" style="width: 20%">
+              <span>STATE</span>
+              <input type="text" formControlName="State" />
+            </div>
+            <div class="suite" style="width: 30%">
+              <span>POSTAL CODE</span>
+              <input type="text" style="width: 56%" formControlName="postal_Code" />
+            </div>
+          </div>
+          <div class="inputs-row-three">
+            <div class="address">
+              <span>PHONE</span>
+              <input type="text" formControlName="Phone" />
+            </div>
+            <div class="suite">
+              <span>FAX</span>
+              <input type="text" style="width: 75%" formControlName="Fax" />
+            </div>
+          </div>
+          <div class="inputs-row-three" style="border-bottom: 1px solid gray">
+            <div class="address" style="width: 60%">
+              <span>DONOR SSN, DRIVER'S LICENSE or EMPLOYEE I.D .NO.</span>
+              <input type="text" style="margin-left: -20px;" formControlName="employee_id_No" />
+            </div>
+            <div class="suite" style="width: 20%; margin-left: 7px">
+              <span>ID VERIFIED BY:</span><i style="margin-left: 20px;">PHOTO ID</i>
+              <mat-checkbox color="primary" style="margin-left: 10px" formControlName="photo_Id"
+                (change)="updateCheckbox('photo_Id', idVerified)"></mat-checkbox>
+            </div>
+            <div class="suite" style="width: 20%">
+              <i>EMPLOYEE REP.</i>
+              <mat-checkbox color="primary" style="margin-left: 10px" formControlName="employee_Rep"
+                (change)="updateCheckbox('employee_Rep',idVerified)"></mat-checkbox>
+            </div>
+          </div>
+          <div class="inputs-row-three" style="align-items: center">
+            <span style="font-weight: 600; margin-left: 7px">DONOR NAME:</span>
+            <div class="address" style="width: 60%">
+              <span style="font-weight: 400;">Last:</span>
+              <input type="text" formControlName="donor_Name_Last" />
+            </div>
+            <div class="suite">
+              <span style="font-weight: 400;">First:</span>
+              <input type="text" style="width: 80%" formControlName="donor_Name_First" />
+            </div>
+          </div>
+          <div class="inputs-row-eight">
+            <div class="inputs-text">
+              <span> REASON FOR TEST:</span>
+            </div>
+            <div class="inputs-checkboxes">
+              <mat-checkbox color="primary" formControlName="reason_Pre_Employement"
+                (change)="updateCheckbox('reason_Pre_Employement',reasonTest)">Pre Employment</mat-checkbox>
+              <mat-checkbox color="primary" formControlName="reason_Random"
+                (change)="updateCheckbox('reason_Random',reasonTest)">Random
+              </mat-checkbox>
+              <mat-checkbox color="primary" formControlName="reason_Reasonable_Cause"
+                (change)="updateCheckbox('reason_Reasonable_Cause',reasonTest)">Reasonable Suspicion/Cause
+              </mat-checkbox>
+              <mat-checkbox color="primary" formControlName="reason_Post_Accident"
+                (change)="updateCheckbox('reason_Post_Accident',reasonTest)">Post Accident</mat-checkbox>
+              <mat-checkbox color="primary" formControlName="reason_Return_Duty"
+                (change)="updateCheckbox('reason_Return_Duty',reasonTest)">Return to Duty</mat-checkbox>
+              <mat-checkbox color="primary" formControlName="reason_Follow_Up"
+                (change)="updateCheckbox('reason_Follow_Up',reasonTest)">
+                Follow up</mat-checkbox>
+              <mat-checkbox color="primary" formControlName="others_check"
+                (change)="updateCheckbox('others_check',reasonTest)">Others
+              </mat-checkbox>
+            </div>
+            <div class="inputs-checkboxe">
+              <input type="text" style="height: 19px;" formControlName="others_input" />
+            </div>
+          </div>
+          <div class="input-row-nine" style="border-bottom: 1px solid gray">
+            <div class="collecter-name" style="border-right: 1px solid gray">
+              <span>COLLECTOR NAME</span>
+              <input type="text" formControlName="collector_Name" />
+            </div>
+            <div class="collecter-info">
+              <div class="collector-phone">
+                <span>Collector Phone No</span>
+                <input type="text" formControlName="collector_Phone" />
+              </div>
+              <div class="collector-fax">
+                <span>Collector Fax No</span>
+                <input type="text" formControlName="collector_Fax" />
+              </div>
+            </div>
+          </div>
+          <div class="inputs-row-eight" style="
+          height: 6.5%;
+          border: none;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+        ">
+            <div class="inputs-text" style="width: 35%; border-bottom-left-radius: 20px">
+              <span> Read Specimen temperature with in (4) minutes</span>
+            </div>
+            <div class="inputs-checkboxes" style="width: 45%">
+              <mat-checkbox color="primary" formControlName="speimen_temperature_yes"
+                (change)="updateCheckbox('speimen_temperature_yes',specimenTemperature)">Yes, 90° - 100°F(32° - 38°C)
+              </mat-checkbox>
+              <mat-checkbox color="primary" formControlName="speimen_temperature_No"
+                (change)="updateCheckbox('speimen_temperature_No',specimenTemperature)">No, record specimen temperature
+                here</mat-checkbox>
+            </div>
+            <div class="inputs-checkboxe" style="width: 20%; border-bottom-right-radius: 20px">
+              <input type="text" formControlName="speimen_temperature_input" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="span-container">
+        <div class="s">
+          <span style="font-weight: 600; margin-left: 20px;">STEP 2: COMPLETED BY DONOR</span>
+        </div>
+
+      </div>
+      <div class="donor-container">
+        <div class="donor">
+          <div class="donor-consents">
+            <span><b>DONOR CONSENT:</b> I certify that I provided my specimen to the
+              collector, that the specimen container was sealed with a tamper proof
+              seal in my presence and that the information provided on this form and
+              on the label affixed to the specimen container is correct. I hereby
+              give permission for the release of the results of these tests to the
+              health care provider. In the case of screening for employment or
+              pre-employment, I also authorize release of the results of these tests
+              to my employer or prospective employer and/or their authorized health
+              care provider.</span>
+          </div>
+          <div class="donor-row-one">
+            <div class="signature">
+              <span>Signature of Donor:</span>
+              <input type="text" formControlName="signature_Donor" />
+            </div>
+            <div class="signature" style="width: 30%">
+              <span>Doctor's Name:</span>
+              <input type="text" formControlName="donor_Docter_Name" />
+            </div>
+            <div class="signature" style="width: 20%">
+              <span>Date:</span>
+              <input type="date" style="margin-left: 5px; height: 35%;" formControlName="donor_Docter_Date" />
+            </div>
+          </div>
+          <div class="donor-row-one" style="margin-top: 5px">
+            <div class="signature">
+              <span>Daytime Phone:</span>
+              <input type="text" formControlName="donor_Docter_DayPhone" />
+            </div>
+            <div class="signature" style="width: 30%">
+              <span>Evening Phone:</span>
+              <input type="text" formControlName="donor_Docter_EvePhone" />
+            </div>
+            <div class="signature" style="width: 20%;">
+              <span>DOB:</span>
+              <input type="date" style="width: 72%; margin-left: 7px; height: 35%;" formControlName="donor_DOB" />
+            </div>
+          </div>
+          <div class="donor-row-two"></div>
+        </div>
+      </div>
+      <div #setPages>
+        <div class="span-container">
+          <div class="s">
+            <span style="font-weight: 600; margin-left: 20px;">STEP 3: COMPLETED BY COLLECTOR - INTIAL TEST
+              RESULTS</span>
+          </div>
+
+        </div>
+
+        <div class="collector-container">
+          <div class="collector">
+            <div class="screening-device">
+              <div class="screeing-inner">
+                <div class="sreening-header">
+                  <mat-checkbox color="primary" formControlName="primilary_Result"></mat-checkbox>
+                  <div>
+                    <span style="font-weight: 600">ON-SITE SCREENING DEVICE </span><br />
+                    <span style="font-weight: 500">preilimiary results</span><br />
+                    <i>(Complete for on-site device results)</i>
+                  </div>
+                </div>
+                <div class="screening-inputs">
+                  <span>Lot:#</span><input type="text" style="width: 85%" formControlName="results_Lot" />
+                </div>
+                <div class="screening-inputs">
+                  <span>Exp.Date:</span><input type="date" style="height: 19px;" formControlName="results_ExpDate" />
+                </div>
+                <div class="screening-inputs" style="flex-direction: column; align-items: start">
+                  <span>Screen performed by:</span><input type="text" style="width: 99%"
+                    formControlName="screen_Performed_By" />
+                </div>
+                <div class="screening-inputs">
+                  <span>Date:</span><input type="date" style="width: 99%;height: 19px;" formControlName="screen_Performed_Date" />
+                </div>
+                <div class="screening-inputs">
+                  <span>Remarks:</span><input type="text" style="width: 99%" formControlName="screen_Remarks" />
+                </div>
+                <div class="screening-inputs">
+                  <input type="text" style="width: 99%" formControlName="screen_Remarks1" />
+                </div>
+                <div class="screening-inputs">
+                  <input type="text" style="width: 99%" formControlName="screen_Remarks2" />
+                </div>
+              </div>
+            </div>
+            <div class="test-result">
+              <div class="test-header">
+                <span> SPECIMAN VALIDITY TEST RESULTS</span><br />
+                <i>(See colour charts and package insert for interpretation)</i>
+              </div>
+              <div class="row-one" style="height: 6%;">
+                <div class="checkbox-end">
+                  <span style="margin-right: 10px;"> All Normal</span>
+                  <mat-checkbox color="primary" formControlName="checked_all_normal"
+                    (change)="checkedAllNormal($event.checked)">
+                  </mat-checkbox>
+                </div>
+              </div>
+              <div class="row-one">
+
+                <div class="div-box">
+                  <div class="div-one">
+                    <div></div>
+                  </div>
+                  <span>OX</span>
+                </div>
+                <div class="div-text">
+                  <span>Oxident</span>
+                </div>
+                <div class="div-condition">
+                  <span>Normal</span>
+                  <span>Abnormal</span>
+                </div>
+                <div class="div-checkboxe">
+                  <mat-checkbox color="primary" formControlName="oxident_Normal"
+                    (change)="updateCheckbox('oxident_Normal', Oxident); normalChecked()">
+                  </mat-checkbox>
+                  <mat-checkbox color="primary" formControlName="oxident_AbNormal"
+                    (change)="updateCheckbox('oxident_AbNormal', Oxident);normalChecked()">
+                  </mat-checkbox>
+                </div>
+              </div>
+              <div class="row-one">
+                <div class="div-box">
+                  <div class="div-one">
+                    <div></div>
+                  </div>
+                  <span>S.G</span>
+                </div>
+                <div class="div-text" style="width: 29%">
+                  <span>Specific Gravity</span>
+                </div>
+                <div class="div-condition">
+                  <span>Normal</span>
+                  <span>Abnormal</span>
+                </div>
+                <div class="div-checkboxe">
+                  <mat-checkbox color="primary" formControlName="specific_Gravity_Normal"
+                    (change)="updateCheckbox('specific_Gravity_Normal',specificGravity);normalChecked()"></mat-checkbox>
+                  <mat-checkbox color="primary" formControlName="specific_Gravity_AbNormal"
+                    (change)="updateCheckbox('specific_Gravity_AbNormal',specificGravity);normalChecked()">
+                  </mat-checkbox>
+                </div>
+              </div>
+              <div class="row-one">
+                <div class="div-box">
+                  <div class="div-one">
+                    <div></div>
+                  </div>
+                  <span>pH</span>
+                </div>
+                <div class="div-text">
+                  <span>pH</span>
+                </div>
+                <div class="div-condition">
+                  <span>Normal</span>
+                  <span>Abnormal</span>
+                </div>
+                <div class="div-checkboxe">
+                  <mat-checkbox color="primary" formControlName="pH_Normal"
+                    (change)="updateCheckbox('pH_Normal',Ph);normalChecked()">
+                  </mat-checkbox>
+                  <mat-checkbox color="primary" formControlName="pH_AbNormal"
+                    (change)="updateCheckbox('pH_AbNormal',Ph);normalChecked()">
+                  </mat-checkbox>
+                </div>
+              </div>
+              <div class="row-one">
+                <div class="div-box">
+                  <div class="div-one">
+                    <div></div>
+                  </div>
+                  <span>Ni</span>
+                </div>
+                <div class="div-text">
+                  <span>Nitrite</span>
+                </div>
+                <div class="div-condition">
+                  <span>Normal</span>
+                  <span>Abnormal</span>
+                </div>
+                <div class="div-checkboxe">
+                  <mat-checkbox color="primary" formControlName="nitrite_Normal"
+                    (change)="updateCheckbox('nitrite_Normal',Nitrite);normalChecked()">
+                  </mat-checkbox>
+                  <mat-checkbox color="primary" formControlName="nitrite_AbNormal"
+                    (change)="updateCheckbox('nitrite_AbNormal',Nitrite);normalChecked()">
+                  </mat-checkbox>
+                </div>
+              </div>
+              <div class="row-one">
+                <div class="div-box">
+                  <div class="div-one">
+                    <div></div>
+                  </div>
+                  <span>GL</span>
+                </div>
+                <div class="div-text">
+                  <span>GL</span>
+                </div>
+                <div class="div-condition">
+                  <span>Normal</span>
+                  <span>Abnormal</span>
+                </div>
+                <div class="div-checkboxe">
+                  <mat-checkbox color="primary" formControlName="GL_Normal"
+                    (change)="updateCheckbox('GL_Normal',gl);normalChecked()">
+                  </mat-checkbox>
+                  <mat-checkbox color="primary" formControlName="GL_AbNormal"
+                    (change)="updateCheckbox('GL_AbNormal',gl);normalChecked()">
+                  </mat-checkbox>
+                </div>
+              </div>
+              <div class="row-one">
+                <div class="div-box">
+                  <div class="div-one">
+                    <div></div>
+                  </div>
+                  <span>CR</span>
+                </div>
+                <div class="div-text">
+                  <span>Createinine</span>
+                </div>
+                <div class="div-condition">
+                  <span>Normal</span>
+                  <span>Abnormal</span>
+                </div>
+                <div class="div-checkboxe">
+                  <mat-checkbox color="primary" formControlName="createinine_Normal"
+                    (change)="updateCheckbox('createinine_Normal',Createinine);normalChecked()"></mat-checkbox>
+                  <mat-checkbox color="primary" formControlName="createinine_AbNormal"
+                    (change)="updateCheckbox('createinine_AbNormal',Createinine);normalChecked()"></mat-checkbox>
+                </div>
+              </div>
+            </div>
+            <div class="drug-name-container">
+              <div class="drug" style="margin-top: 25px">
+                <div class="drug-name">
+                  <span style="font-weight: 600">DRUG NAME</span>
+                </div>
+                <div class="neg">
+                  <span>NEG</span>
+                </div>
+                <div class="positive">
+                  <span>PRESUMPTIVE POSITIVE</span>
+                </div>
+                <div class="not-tested">
+                  <span>NOT TESTED</span>
+                </div>
+              </div>
+              <div class="drug" style="margin-top: 10px">
+                <div class="drug-name">
+                  <span>Amphetamine (AMP)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="amphetamine_Neg"
+                    (change)="updateCheckbox('amphetamine_Neg',Amphetamine)">
+                  </mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="amphetamine_Presumptive"
+                    (change)="updateCheckbox('amphetamine_Presumptive',Amphetamine)"></mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="amphetamine_NotTested"
+                    (change)="updateCheckbox('amphetamine_NotTested',Amphetamine)"></mat-checkbox>
+                </div>
+              </div>
+              <div class="drug">
+                <div class="drug-name">
+                  <span>Benzodiazepines (BZO)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="benzodiazepines_Neg"
+                    (change)="updateCheckbox('benzodiazepines_Neg',benzodiazepines)"></mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="benzodiazepines_Presumptive"
+                    (change)="updateCheckbox('benzodiazepines_Presumptive',benzodiazepines)"></mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="benzodiazepines_NotTested"
+                    (change)="updateCheckbox('benzodiazepines_NotTested',benzodiazepines)"></mat-checkbox>
+                </div>
+              </div>
+              <div class="drug">
+                <div class="drug-name">
+                  <span>Buprenorphine (BUP)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="buprenorphine_Neg"
+                    (change)="updateCheckbox('buprenorphine_Neg',buprenorphine)"></mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="buprenorphine_Presumptive"
+                    (change)="updateCheckbox('buprenorphine_Presumptive',buprenorphine)"></mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="buprenorphine_NotTested"
+                    (change)="updateCheckbox('buprenorphine_NotTested',buprenorphine)"></mat-checkbox>
+                </div>
+              </div>
+              <div class="drug">
+                <div class="drug-name">
+                  <span>Cocaine (COC)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="cocaine_Neg"
+                    (change)="updateCheckbox('cocaine_Neg',cocaine)">
+                  </mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="cocaine_Presumptive"
+                    (change)="updateCheckbox('cocaine_Presumptive',cocaine)"></mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="cocaine_NotTested"
+                    (change)="updateCheckbox('cocaine_NotTested',cocaine)">
+                  </mat-checkbox>
+                </div>
+              </div>
+              <div class="drug">
+                <div class="drug-name">
+                  <span>Marijuana (THC)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="marijuana_Neg"
+                    (change)="updateCheckbox('marijuana_Neg',marijuana)">
+                  </mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="marijuana_Presumptive"
+                    (change)="updateCheckbox('marijuana_Presumptive',marijuana)"></mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="marijuana_NotTested"
+                    (change)="updateCheckbox('marijuana_NotTested',marijuana)"></mat-checkbox>
+                </div>
+              </div>
+              <div class="drug">
+                <div class="drug-name">
+                  <span>Methadone (MTD)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="methadone_Neg"
+                    (change)="updateCheckbox('methadone_Neg',methadone)">
+                  </mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="methadone_Presumptive"
+                    (change)="updateCheckbox('methadone_Presumptive',methadone)"></mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="methadone_NotTested"
+                    (change)="updateCheckbox('methadone_NotTested',methadone)"></mat-checkbox>
+                </div>
+              </div>
+              <div class="drug" style="height: 7%">
+                <div class="drug-name">
+                  <span>Methamphetamine (mAMP)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="methamphetamine_Neg"
+                    (change)="updateCheckbox('methamphetamine_Neg',methamphetamine)"></mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="methamphetamine_Presumptive"
+                    (change)="updateCheckbox('methamphetamine_Presumptive',methamphetamine)"></mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="methamphetamine_NotTested"
+                    (change)="updateCheckbox('methamphetamine_NotTested',methamphetamine)"></mat-checkbox>
+                </div>
+              </div>
+              <div class="drug">
+                <div class="drug-name">
+                  <span>Ecstasy (MDMA)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="Ecstasy_Neg"
+                    (change)="updateCheckbox('Ecstasy_Neg',Ecstasy)">
+                  </mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="Ecstasy_Presumptive"
+                    (change)="updateCheckbox('Ecstasy_Presumptive',Ecstasy)"></mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="Ecstasy_NotTested"
+                    (change)="updateCheckbox('Ecstasy_NotTested',Ecstasy)">
+                  </mat-checkbox>
+                </div>
+              </div>
+              <div class="drug">
+                <div class="drug-name">
+                  <span>Opiate (OPI/MOP)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="opiate_Neg"
+                    (change)="updateCheckbox('opiate_Neg',opiate)">
+                  </mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="opiate_Presumptive"
+                    (change)="updateCheckbox('opiate_Presumptive',opiate)">
+                  </mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="opiate_NotTested"
+                    (change)="updateCheckbox('opiate_NotTested',opiate)">
+                  </mat-checkbox>
+                </div>
+              </div>
+              <div class="drug">
+                <div class="drug-name">
+                  <span>Oxycodone (OXY)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="oxycodone_Neg"
+                    (change)="updateCheckbox('oxycodone_Neg',oxycodone)">
+                  </mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="oxycodone_Presumptive"
+                    (change)="updateCheckbox('oxycodone_Presumptive',oxycodone)"></mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="oxycodone_NotTested"
+                    (change)="updateCheckbox('oxycodone_NotTested',oxycodone)"></mat-checkbox>
+                </div>
+              </div>
+              <div class="drug">
+                <div class="drug-name">
+                  <span>Phencyclidine (PCP)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="phencyclidine_Neg"
+                    (change)="updateCheckbox('phencyclidine_Neg',phencyclidine)"></mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="phencyclidine_Presumptive"
+                    (change)="updateCheckbox('phencyclidine_Presumptive',phencyclidine)"></mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="phencyclidine_NotTested"
+                    (change)="updateCheckbox('phencyclidine_NotTested',phencyclidine)"></mat-checkbox>
+                </div>
+              </div>
+              <div class="drug" style="height: 5.5%">
+                <div class="drug-name">
+                  <span>Propoxyphene (PPX)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="propoxyphene_Neg"
+                    (change)="updateCheckbox('propoxyphene_Neg',propoxyphene)"></mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="propoxyphene_Presumptive"
+                    (change)="updateCheckbox('propoxyphene_Presumptive',propoxyphene)"></mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="propoxyphene_NotTested"
+                    (change)="updateCheckbox('propoxyphene_NotTested',propoxyphene)"></mat-checkbox>
+                </div>
+              </div>
+              <div class="drug" style="height: 7.5%">
+                <div class="drug-name">
+                  <span>Tricyclic Antidepressants (TCA)</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="antidepressants_Neg"
+                    (change)="updateCheckbox('antidepressants_Neg',antidepressants)"></mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="antidepressants_Presumptive"
+                    (change)="updateCheckbox('antidepressants_Presumptive',antidepressants)"></mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="antidepressants_NotTested"
+                    (change)="updateCheckbox('antidepressants_NotTested',antidepressants)"></mat-checkbox>
+                </div>
+              </div>
+              <div class="drug">
+                <div class="drug-name"><span> Others</span><input type="text" style="height: 19px;" formControlName="drug_Others" /></div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="others_Neg"
+                    (change)="updateCheckbox('others_Neg',others)">
+                  </mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="others_Presumptive"
+                    (change)="updateCheckbox('others_Presumptive',others)">
+                  </mat-checkbox>
+                </div>
+                <div class="not-tested">
+                  <mat-checkbox color="primary" formControlName="others_NotTested"
+                    (change)="updateCheckbox('others_NotTested',others)">
+                  </mat-checkbox>
+                </div>
+              </div>
+              <span style="font-weight: 600; margin-top: 5px; margin-left: 10px;">
+                ALCOHOL SCREEN (IF Performed)</span>
+              <div class="drug" style="margin-top: 3px; height: 9%; border-bottom-right-radius: 20px">
+                <div class="drug-name">
+                  <span>Results</span>
+                </div>
+                <div class="neg">
+                  <mat-checkbox color="primary" formControlName="results_Neg"
+                    (change)="updateCheckbox('results_Neg',results)">
+                  </mat-checkbox>
+                </div>
+                <div class="positive">
+                  <mat-checkbox color="primary" formControlName="results_Presumptive"
+                    (change)="updateCheckbox('results_Presumptive',results)"></mat-checkbox>
+                </div>
+                <div class="not-tested" style="border-bottom-right-radius: 20px">
+                  <mat-checkbox color="primary" formControlName="results_NotTested"
+                    (change)="updateCheckbox('results_NotTested',results)">
+                  </mat-checkbox>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="span-container">
+        <div class="s">
+          <span style="font-weight: 600; margin-left: 20px;">STEP 4: COLLECTOR CERTIFICATION</span>
+        </div>
+
+      </div>
+      <div class="collecter-certification-container">
+        <div class="collecter-certification">
+          <div class="row-one">
+            <span>COLLECTOR CERTIFICATION: </span>
+            <i style="margin-left: 3px;">I certify that the specimen given to me by the donor identified above was
+              collected, labeled, sealed & released as noted in accordance with applicable requirements.</i>
+          </div>
+          <div class="row-two">
+            <span>Signature of Collecter</span>
+            <input type="text" formControlName="signature_Collecter">
+          </div>
+          <div class="row-two" style="border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;">
+            <span>Collecter's Name</span>
+            <input type="text" style="width: 83%;" formControlName="collecter_Name">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" style="margin-top:25px;" (click)="exportToPDF()"> <i
+      class='fas fa-file-pdf ' style="font-size: 20px;margin-right: 5px;"></i> Export </button>
+  <button mat-raised-button color="primary" style="margin-top:25px" (click)="submit()">
+    <mat-icon style="margin-top: -4px;margin-right: 5px;">save</mat-icon>Submit
+  </button>
+
+</mat-dialog-actions>

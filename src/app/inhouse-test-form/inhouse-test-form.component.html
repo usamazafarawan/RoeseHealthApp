@@ -1,0 +1,218 @@
+<mat-dialog-content class="mat-typography" style="overflow: auto;">
+    <i mat-dialog-title>
+        <mat-icon class="mat-icon close-icon" mat-dialog-close>close</mat-icon>
+    </i>
+    <form [formGroup]="southwestForm">
+        <div class="main-container" #pdfContent>
+            <div class="form-header">
+                <div class="header">
+                    <div class="logo">
+                        <!-- <img src="../..///assets/Clia.png"> -->
+                    </div>
+                    <div class="text">
+                        <h2>SOUTWHEST URGENT CARE & FAMILY PRACTICE 5900 CHIMNEY ROCK RD. SUITE X HOUSTON TX. 77081 <br>
+                            713-640-5754
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
+            <div class="input-container">
+                <div class="inputs">
+                    <div class="row-one">
+                        <div class="col-one">
+                            <span>PATIENT NAME:</span>
+                            <input type="text" formControlName="patientName">
+                        </div>
+                        <div class="col-one">
+                            <span>DOB:</span>
+                            <input id="dob" style="width: 74%;" type="date" formControlName="date">
+                        </div>
+                    </div>
+                    <div class="row-one">
+                        <div class="col-one">
+                            <span>DATE:</span>
+                            <input id="date" type="date" formControlName="DOB">
+                        </div>
+                        <div class="col-two">
+                            <span>PROVIDER:</span>
+                            <input style="width: 54%;" type="text" formControlName="prividers">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="two-div-container" style="height: 40px;border:none;">
+                <div class="two-div">
+                    <div class="img-section" style="align-items: center;justify-content: start;border:none">
+                        <label class="file-input-label">
+                            <span>Choose File: </span>
+                            <input type="file" (change)="onFileSelection($event)" />
+
+                        </label>
+                        <span> {{selctedFile}}</span>
+                    </div>
+                    <div class="table-section" style="align-items: start;justify-content: start;border:none">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="two-div-container">
+                <div class="two-div">
+
+                    <div class="img-section">
+
+                        <div *ngIf="imageUrl">
+                            <img [src]="imageUrl" alt="Uploaded Image">
+                        </div>
+                    </div>
+                    <div class="table-section">
+                        <div class="row-one">
+                            <div class="section-one">
+                                <span>A1C</span>
+                            </div>
+                            <div class="section-two">
+                                <div class="inputs-section">
+                                    <input type="number" formControlName="a1c_value" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-one">
+                            <div class="section-one">
+                                <span>FBS</span>
+                            </div>
+                            <div class="section-two">
+                                <div class="inputs-section">
+                                    <input type="radio" name="fbs" formControlName="fbs" value="positive"
+                                        class="radio" /><label for="radio"></label><span>Positive</span>
+                                    <input type="radio" name="fbs" formControlName="fbs"
+                                        value="negative" /><span>Negative</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-one">
+                            <div class="section-one">
+                                <span>STREEP</span>
+                            </div>
+                            <div class="section-two">
+                                <div class="inputs-section">
+                                    <input type="radio" name="streep" formControlName="streep"
+                                        value="positive" /><span>Positive</span>
+                                    <input type="radio" name="streep" formControlName="streep"
+                                        value="negative" /><span>Negative</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-one">
+                            <div class="section-one">
+                                <span>FLU</span>
+                            </div>
+                            <div class="section-two">
+                                <div class="inputs-section">
+                                    <input type="radio" name="FLU" formControlName="FLU"
+                                        value="positive" /><span>Positive</span>
+                                    <input type="radio" name="FLU" formControlName="FLU"
+                                        value="negative" /><span>Negative</span>
+
+                                </div>
+                                <div class="positive-section" *ngIf="isPositive">
+                                    <div> <input type="radio" name="flu_positive" value="flu-pos-A"
+                                            formControlName="flu_positive" /><span>A</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="flu_positive" value="flu-pos-B"
+                                            formControlName="flu_positive" /><span>B</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-one">
+                            <div class="section-one">
+                                <span>H-PYLORI</span>
+                            </div>
+                            <div class="section-two">
+                                <div class="inputs-section">
+                                    <input type="radio" name="PYLORI" formControlName="PYLORI"
+                                        value="positive" /><span>Positive</span>
+                                    <input type="radio" name="PYLORI" formControlName="PYLORI"
+                                        value="negative" /><span>Negative</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-one">
+                            <div class="section-one">
+                                <span>PREGNENCY URINE</span>
+                            </div>
+                            <div class="section-two">
+                                <div class="inputs-section">
+                                    <input type="radio" name="PREGNENCY" formControlName="PREGNENCY"
+                                        value="positive" /><span>Positive</span>
+                                    <input type="radio" name="PREGNENCY" formControlName="PREGNENCY"
+                                        value="negative" /><span>Negative</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-one">
+                            <div class="section-one">
+                                <span>PREGNENCY BLOOD</span>
+                            </div>
+                            <div class="section-two">
+                                <div class="inputs-section">
+                                    <input type="radio" name="BLOOD" formControlName="BLOOD"
+                                        value="positive" /><span>Positive</span>
+                                    <input type="radio" name="BLOOD" formControlName="BLOOD"
+                                        value="negative" /><span>Negative</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-one">
+                            <div class="section-one">
+                                <span>FECAL BLOOD OCCULT</span>
+                            </div>
+                            <div class="section-two">
+                                <div class="inputs-section">
+                                    <input type="radio" name="FECAL" formControlName="FECAL"
+                                        value="positive" /><span>Positive</span>
+                                    <input type="radio" name="FECAL" formControlName="FECAL"
+                                        value="negative" /><span>Negative</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-one" style="border-bottom: none">
+                            <div class="section-one">
+                                <span>COVID ANTIGEN</span>
+                            </div>
+                            <div class="section-two">
+                                <div class="inputs-section">
+                                    <input type="radio" name="COVID" formControlName="COVID"
+                                        value="positive" /><span>Positive</span>
+                                    <input type="radio" name="COVID" formControlName="COVID"
+                                        value="negative" /><span>Negative</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-container">
+                <div class="footer">
+                    <div class="row-one">
+                        <span>PROVIDERS SIGNATURE:</span><input type="text" formControlName="prividers_signature">
+                    </div>
+                    <div class="row-two">
+                        <span>Date:</span><input type="date" formControlName="prividers_Date">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" style="margin-top:25px;" (click)="exportToPDF()"> <i
+            class='fas fa-file-pdf ' style="font-size: 20px;margin-right: 5px;"></i> Export </button>
+    <button mat-raised-button color="primary" style="margin-top:25px;" (click)="submit()">
+        <mat-icon style="margin-top: -4px;margin-right: 5px;">save</mat-icon>Submit
+    </button>
+
+</mat-dialog-actions>

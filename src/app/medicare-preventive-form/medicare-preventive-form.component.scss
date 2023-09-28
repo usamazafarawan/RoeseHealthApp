@@ -1,0 +1,1173 @@
+:host::ng-deep {
+  .mat-checkbox-layout .mat-checkbox-label {
+    white-space: break-spaces;
+  }
+  .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+    background-color: black !important;
+  }
+
+  .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+  .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: black;
+  }
+}
+
+[type="text"] {
+  font-size: 18px !important;
+}
+.button-on-top {
+  height: 1px;
+}
+.main-container {
+  .medicare-form-header {
+    display: block;
+    width: 50%;
+    height: 100px;
+    margin-top: 40px;
+    margin-left: 70px;
+    h1 {
+      font-weight: 500;
+    }
+    input {
+      border: none;
+      outline: none;
+      border-bottom: 1px solid black;
+      background-color: transparent;
+      width: 20%;
+    }
+    span {
+      font-weight: 500;
+    }
+  }
+  .intial-form-conatiner {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    .intial-form {
+      width: 90%;
+      height: 100%;
+      border: 1px solid black;
+      border-bottom: none;
+      display: flex;
+      flex-direction: column;
+      .row-one {
+        width: 100%;
+        height: 15%;
+        border-bottom: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        div {
+          width: 25%;
+          height: 100%;
+          border-right: 1px solid black;
+          display: flex;
+        }
+      }
+      .row-two {
+        width: 100%;
+        height: 13%;
+        border-bottom: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        div {
+          width: 37.5%;
+          height: 100%;
+          border-right: 1px solid black;
+          display: flex;
+          flex-direction: column;
+          input {
+            width: 70%;
+            height: 30px;
+            margin-left: 88px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+          }
+          span {
+            margin-left: 7px;
+            font-weight: 500;
+          }
+        }
+      }
+      .row-four {
+        width: 100%;
+        height: 10%;
+        border-bottom: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        div {
+          width: 75%;
+          height: 100%;
+          border-right: 1px solid black;
+          display: flex;
+          flex-direction: column;
+          input {
+            width: 70%;
+            height: 30px;
+            margin-left: 88px;
+            border: none;
+            outline: none;
+            margin-top:27px;
+            background-color: transparent;
+          }
+
+          span {
+            margin-left: 7px;
+            font-weight: 500;
+
+          }
+          .sex-design {
+            display: flex;
+            flex-direction: row;
+            margin-left: 7px;
+            margin-top: 20px;
+            border: none;
+            span {
+              margin-left: -5px;
+            font-weight: 500;
+
+            }
+          }
+        }
+      }
+      .row-six {
+        width: 100%;
+        height: 15%;
+        border-bottom: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        div {
+          width: 12.47%;
+          height: 100%;
+          border-right: 1px solid black;
+          display: flex;
+          flex-direction: column;
+          input {
+            width: 80%;
+            height: 30px;
+            border: none;
+            outline: none;
+            margin-top: 17px;
+            background-color: transparent;
+          }
+
+          span {
+            margin-left: 7px;
+
+          }
+        }
+      }
+      .row-seven {
+        width: 100%;
+        height: 5.2%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid black;
+        span {
+          margin: 0px;
+        }
+        .mat-checkbox {
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+  .social-history-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    .social-history {
+      margin-top: 30px;
+      width: 90%;
+      height: 90%;
+      border: 1px solid black;
+      .social-row-one {
+        height: 7%;
+        border-bottom: 1px solid black;
+        width: 100%;
+        background-color: #dcddde;
+        span {
+          font-weight: 600;
+        }
+      }
+      .social-row-two {
+        height: 7%;
+        border-bottom: 1px solid black;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        div {
+          width: 97%;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          margin-left: 10px;
+          .checkboxes {
+            width: 14%;
+            height: 100%;
+
+            input {
+              width: 70%;
+              border: none;
+              outline: none;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+      .social-row-three {
+        height: 20%;
+        border-bottom: 1px solid black;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        div {
+          width: 97%;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          margin-left: 10px;
+          .checkboxes {
+            width: 14%;
+            height: 100%;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+
+            input {
+              width: 70%;
+              // height: 30px;
+              // margin-left: 88px;
+              border: none;
+              outline: none;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+      .social-row-four {
+        height: 7%;
+        border-bottom: 1px solid black;
+        width: 100%;
+        // background-color: #dcddde;
+        display: flex;
+        flex-direction: row;
+        .diet-notes {
+          width: 50%;
+          height: 100%;
+          border-right: 1px solid black;
+          display: flex;
+          flex-direction: row;
+          input {
+            width: 70%;
+            margin-left: 10px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+          }
+        }
+        .Caffine {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          div {
+            width: 97%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+            .checkboxes {
+              width: 20%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      .social-row-five {
+        height: 30%;
+        border-bottom: 1px solid black;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        div {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
+
+          .div-inner {
+            width: 97%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+            .checkboxes {
+              width: 14%;
+              height: 30%;
+              // display: flex;
+              // align-items: center;
+              // justify-content: center;
+              // margin-left: ;
+
+              input {
+                width: 70%;
+                // height: 30px;
+                // margin-left: 88px;
+                border: none;
+                outline: none;
+                background-color: transparent;
+              }
+            }
+          }
+          .lower-div {
+            display: flex;
+            flex-direction: column;
+            height: 70%;
+            margin-top: -40px;
+            justify-content: center;
+            span {
+              margin-left: 10px;
+            }
+            input {
+              width: 90%;
+              margin-left: 10px;
+              border: none;
+              outline: none;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+      .social-row-six {
+        height: 7%;
+        border-bottom: 1px solid black;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .diet-notes {
+          width: 50%;
+          height: 100%;
+          border-right: 1px solid black;
+          display: flex;
+          flex-direction: row;
+          input {
+            width: 70%;
+            margin-left: 10px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+          }
+        }
+        .Caffine {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          input {
+            width: 70%;
+            margin-left: 10px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+          }
+        }
+      }
+      .social-row-seven {
+        height: 20%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        div {
+          width: 97%;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          margin-left: 10px;
+          .checkboxes {
+            width: 14%;
+            height: 100%;
+
+            input {
+              width: 70%;
+              border: none;
+              outline: none;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+  .famil-history-container {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    .family-history {
+      width: 90%;
+      height: 95%;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      .family-row-one {
+        height: 15%;
+        width: 100%;
+        background-color: #dcddde;
+        border-bottom: 1px solid black;
+        span {
+          font-weight: 600;
+          margin-left: 7px;
+          width: 10%;
+        }
+      }
+      .family-row-two {
+        height: 9.4%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid black;
+
+        div {
+          width: 9.4%;
+          height: 100%;
+          border-left: 1px solid black;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .page-1-footer {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    div {
+      width: 90%;
+      height: 90%;
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+      justify-content: space-between;
+      .img {
+        width: 50%;
+        height: 90%;
+        img {
+          width: 100%;
+        }
+      }
+      .img-text {
+        width: 50%;
+        height: 90%;
+        margin-left: 20px;
+        span {
+          margin-top: 38px;
+        }
+      }
+    }
+  }
+  .page-2-header {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    div {
+      width: 90%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      span {
+        margin-top: 6px;
+        font-weight:500
+      }
+      input {
+        border: none;
+        outline: none;
+        margin-left: 7px;
+        background-color: transparent;
+        border-bottom: 1px solid black;
+        height: 80%;
+      }
+    }
+  }
+  .medical-history-container {
+    width: 100%;
+    height: 350px;
+
+    display: flex;
+    justify-content: center;
+    .medical-history {
+      width: 90%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 18px;
+      border: 1px solid black;
+      .medihist-row-one {
+        height: 10%;
+        width: 100%;
+        background-color: #dcddde;
+        border-bottom: 1px solid black;
+        align-items: center;
+        display: flex;
+        span {
+          font-weight: 600;
+          // margin-top: 10px;
+          margin-left: 7px;
+        }
+      }
+      .medihist-row-two {
+        height: 20%;
+        width: 100%;
+        border-bottom: 1px solid black;
+        // align-items: center;
+        display: flex;
+        flex-direction: row;
+        div {
+          width: 20%;
+          border-left: 1px solid black;
+          height: 100%;
+          align-items: center;
+          display: flex;
+          span {
+            font-weight: 500;
+            margin-left: 7px;
+          }
+        }
+      }
+      .medihist-row-multiple {
+        height: 11.6%;
+        width: 100%;
+        border-bottom: 1px solid black;
+        // align-items: center;
+        display: flex;
+        flex-direction: row;
+        div {
+          width: 20%;
+          border-left: 1px solid black;
+          height: 100%;
+          align-items: center;
+          display: flex;
+          input {
+            width: 80%;
+            height: 100%;
+            border: none;
+            background-color: transparent;
+            outline: none;
+          }
+          span {
+            font-weight: 500;
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+  }
+  .medication-list-container {
+    width: 100%;
+    height: 400px;
+    // background-color: blueviolet;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    .medication-list {
+      width: 90%;
+      height: 90%;
+      // background-color: aqua;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      border: 1px solid black;
+      .medication-row-one {
+        width: 100%;
+        height: 15%;
+        background-color: #dcddde;
+        align-items: center;
+        display: flex;
+        border-bottom: 1px solid black;
+        span {
+          font-weight: 600;
+          margin-left: 7px;
+        }
+      }
+      .medication-row-multiple {
+        width: 100%;
+        height: 9.4%;
+        // align-items: center;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid black;
+        div {
+          height: 100%;
+          border-left: 1px solid black;
+          // align-items: center;
+          // display: flex;
+          input {
+            border: none;
+            background-color: transparent;
+            outline: none;
+            width: 90%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .problem-list-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    .problem-list {
+      width: 90%;
+      height: 95%;
+      margin-top: 10px;
+      border: 1px solid black;
+      .problem-row-one {
+        width: 100%;
+        height: 5%;
+        background-color: #dcddde;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid black;
+        span {
+          font-weight: 600;
+          margin-left: 7px;
+        }
+      }
+      .problem-multiple-row {
+        width: 100%;
+        height: 5%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid black;
+        div {
+          border-left: 1px solid black;
+          height: 100%;
+          span {
+            font-weight: 500;
+            margin-left: 7px;
+          }
+          input {
+            border: none;
+            background-color: transparent;
+            outline: none;
+            width: 90%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .others-physicians-container {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    .others-physician {
+      width: 90%;
+      height: 90%;
+      margin-top: 20px;
+      border: 1px solid black;
+      .physician-row-one {
+        width: 100%;
+        height: 10%;
+        background-color: #dcddde;
+        border-bottom: 1px solid black;
+        align-items: center;
+        display: flex;
+        span {
+          font-weight: 600;
+          margin-left: 7px;
+        }
+      }
+      .physician-row-two {
+        width: 100%;
+        height: 11.25%;
+        border-bottom: 1px solid black;
+        align-items: center;
+        display: flex;
+        div {
+          height: 100%;
+          border-left: 1px solid black;
+          width: 40%;
+          align-items: center;
+          display: flex;
+          span {
+            margin-left: 7px;
+            font-weight: 500;
+          }
+          input {
+            border: none;
+            background-color: transparent;
+            outline: none;
+            width: 90%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .page-3-footer {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    div {
+      width: 90%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .mat-icon {
+        font-weight: 900 !important;
+      }
+      input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+        height: 100%;
+        width: 40%;
+      }
+    }
+  }
+  .depression-screening-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    .depression-screaning {
+      width: 90%;
+      height: 80%;
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      .depression-row-one {
+        height: 33.3%;
+        width: 100%;
+        border-bottom: 1px solid black;
+        align-items: center;
+        display: flex;
+        background-color: #dcddde;
+        span {
+          font-weight: 600;
+          margin-left: 7px;
+        }
+      }
+      .depression-rows {
+        height: 33.3%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid black;
+        div {
+          height: 100%;
+          border-left: 1px solid black;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .functional-ability-container {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    .functional-ability {
+      width: 90%;
+      height: 90%;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      .functional-row-one {
+        width: 100%;
+        height: 10%;
+        background-color: #dcddde;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        span {
+          margin-left: 7px;
+          font-weight: 600;
+        }
+      }
+      .functional-rows {
+        // height: 10%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid black;
+        div {
+          height: 100%;
+          border-left: 1px solid black;
+          display: flex;
+          align-items: center;
+          input {
+            margin-top: 40px;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            width: 90%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .evaluation-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    .evaluate {
+      width: 90%;
+      height: 90%;
+      border: 1px solid black;
+      margin-top: 10px;
+      .evaluate-row-one {
+        width: 100%;
+        height: 20%;
+        background-color: #dcddde;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid black;
+        span {
+          font-weight: 600;
+          margin-left: 7px;
+        }
+      }
+      .evaluate-others-rows {
+        width: 100%;
+        height: 26.6%;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        border-bottom: 1px solid black;
+        span {
+          margin-left: 7px;
+        }
+        input {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          width: 90%;
+          height: 90%;
+        }
+      }
+    }
+  }
+  .vision-examination-container {
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    display: flex;
+    .vision-examination {
+      width: 90%;
+      margin-top: 15px;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      .vision-row-one {
+        width: 100%;
+        height: 50%;
+        background-color: #dcddde;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        span {
+          font-weight: 600;
+          margin-left: 7px;
+        }
+      }
+      .vision-last-row {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        input {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          width: 40%;
+          height: 90%;
+        }
+      }
+    }
+  }
+  .electrocardiogram-container {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    .electrocardiogram {
+      width: 90%;
+      height: 90%;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      .electrocardiogram-row-one {
+        height: 20%;
+        width: 100%;
+        background-color: #dcddde;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        span {
+          font-weight: 600;
+          margin-left: 7px;
+        }
+      }
+      .electrocardiogram-last {
+        height: 80%;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        textarea {
+          width: 95%;
+          margin-left: 7px;
+          height: 90%;
+          border: none;
+          outline: none;
+          resize: none;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .advice-container {
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    .advice {
+      width: 90%;
+      height: 90%;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      .advice-row-one {
+        width: 100%;
+        height: 15%;
+        background-color: #dcddde;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        span {
+          font-weight: 600;
+          margin-left: 7px;
+        }
+      }
+      .advice-last {
+        width: 100%;
+        height: 85%;
+        display: flex;
+        align-items: center;
+        // input{
+        textarea {
+          width: 95%;
+          margin-left: 7px;
+          height: 90%;
+          border: none;
+          outline: none;
+          resize: none;
+          font-size: 18px;
+        }
+        // }
+      }
+    }
+  }
+  .chronic-care-container {
+    width: 100%;
+    height: 120px;
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: center;
+    .chronic-care {
+      width: 90%;
+      height: 90%;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      .chronic-row-one {
+        height: 20%;
+        width: 100%;
+        background-color: #dcddde;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        span {
+          font-weight: 600;
+          margin-left: 7px;
+        }
+      }
+      .choronic-2last-row {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .choronic-last-row {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        span {
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+  .potential-recommendations-container {
+    width: 100%;
+    height: 350px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    .potential-recommendations {
+      width: 90%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      .potential-row-one {
+        width: 100%;
+        height: 15%;
+        background-color: #dcddde;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid black;
+        span {
+          margin-left: 7px;
+        }
+      }
+      .potential-rows-multiple {
+        width: 100%;
+        height: 8.5%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid black;
+        div {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          span {
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+  }
+  .handouts-reviewed-container {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    .handouts-reviewed {
+      width: 90%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      .handouts-row-one {
+        background-color: #dcddde;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+        span {
+          margin-left: 7px;
+          font-weight: 600;
+        }
+      }
+      .handouts-textera {
+        width: 100%;
+        height: 90%;
+        textarea {
+          width: 95%;
+          margin-left: 7px;
+          height: 90%;
+          border: none;
+          outline: none;
+          resize: none;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .preventive-service-container {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    .preventive-service {
+      width: 90%;
+      height: 95%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      .preventive-row-one {
+        height: 3%;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px solid black;
+      }
+      .preventive-row-two {
+        height: 6%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid black;
+        span {
+          width: 68%;
+        }
+      }
+      .preventive-multiple-row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 3%;
+        border-bottom: 1px solid black;
+        div {
+          width: 70%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          input {
+            width: 80%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            height: 100%;
+          }
+          span {
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+  }
+}

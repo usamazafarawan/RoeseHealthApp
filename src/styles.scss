@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+[type=text], [type=date], [type=time], textarea{
+    font-size: 18px !important;
+    font-family: sans-serif;
+}
+
+// span {
+//     font-size: 1vw;
+// }
+
+input::-webkit-calendar-picker-indicator, [type=radio]:hover {
+    cursor: pointer;
+}
+
+.close-icon{
+    width: 100% !important;
+    height: 5% !important;
+    display: flex !important;
+    position: absolute !important;
+    justify-content: end !important;
+    top: 32px !important;
+    right: 70px !important;
+    z-index: 1 !important;
+    &:hover{
+        color: #3F51B5 !important;
+        border-radius: 50px !important;
+        cursor: pointer !important;
+    }
+}
+
+.mat-dialog-container{
+    padding: 5px 24px !important;
+}
